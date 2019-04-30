@@ -1,9 +1,9 @@
-const todos =  [
-  {
-    id: 1,
-    title: "lunch",
-    description: "Go for lunc by 2pm"
-  }
-];
 
-export default todos;
+const Pool = require('pg').Pool
+const pool = new Pool({
+  user: 'me',
+  host: 'localhost',
+  database: 'api',
+  password: 'password',
+  port: 5432,
+})
