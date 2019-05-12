@@ -5,11 +5,12 @@
    "username": "me",
    "password": "password",
    "database": "api",
-   "synchronize": true,
+   "synchronize": false,
+   "migrationsRun": true,
    "logging": false,
-   "entities": ["build/db/entity.js"],
+   "entities": ["build/src/entity/*.js"],
    "migrations": [
-      "src/migration/**/*.ts"
+      "build/src/migration/**/*.js"
    ],
    "subscribers": [
       "src/subscriber/**/*.ts"

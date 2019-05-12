@@ -1,0 +1,16 @@
+version: "3"
+services:
+    pgadmin:
+        image: fenglc/pgadmin4
+        environment:
+            - DEFAULT_USER=admin
+            - DEFAULT_PASSWORD=admin
+        ports:
+            - 8080:5050
+    postgres:
+        image: 'postgres'
+        environment:
+            - POSTGRES_PASSWORD=postgres
+            - POSTGRES_USER=postgres
+        ports:
+            - 8081:5432

@@ -5,7 +5,13 @@
    "main": "app.js",
    "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "tsc && node_modules/.bin/nodemon build/app.js --exec babel-node --"
+      "start": "tsc && node_modules/.bin/nodemon build/app.js --exec babel-node --",
+      "x": "tsc",
+      "db": "brew services start postgresql",
+      "create": "typeorm migration:generate -n Test",
+      "createX": "typeorm migration:create -n Test",
+      "migrate": "typeorm migration:run",
+      "sync": "typeorm schema:sync"
    },
    "repository": {
       "type": "git",
@@ -33,7 +39,7 @@
    "devDependencies": {
       "@types/node": "8.0.29",
       "nodemon": "^1.18.10",
-      "ts-node": "3.3.0",
+      "ts-node": "^3.3.0",
       "typescript": "^3.5.0-dev.20190430"
    }
 }
