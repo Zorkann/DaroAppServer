@@ -2,11 +2,11 @@
    "name": "daroappserver",
    "version": "1.0.0",
    "description": "",
-   "main": "app.js",
+   "main": "build/app.js",
    "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "tsc && node_modules/.bin/nodemon build/app.js --exec babel-node --",
-      "x": "tsc",
+      "start": "ts-node src/app.ts",
+      "start:watch": "nodemon",
       "db": "brew services start postgresql",
       "create": "typeorm migration:generate -n Test",
       "createX": "typeorm migration:create -n Test",
@@ -37,9 +37,21 @@
       "typeorm": "0.2.16"
    },
    "devDependencies": {
-      "@types/node": "8.0.29",
       "nodemon": "^1.18.10",
-      "ts-node": "^3.3.0",
-      "typescript": "^3.5.0-dev.20190430"
+      "ts-node": "7.0.1",
+      "typescript": "3.4.5"
+   },
+   "nodemonConfig": {
+      "ignore": [
+         "**/*.test.ts",
+         "**/*.spec.ts",
+         ".git",
+         "node_modules"
+      ],
+      "watch": [
+         "src"
+      ],
+      "exec": "npm run start",
+      "ext": "ts"
    }
 }

@@ -1,5 +1,5 @@
-import {User} from "./db/entity";
-import {getManager} from "typeorm";
+import  User  from "./entity/User";
+import { getManager } from "typeorm";
 
 module.exports = function (app, connection) {
   // todoList Routes

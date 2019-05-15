@@ -1,19 +1,19 @@
 {
    "type": "postgres",
-   "host": "localhost",
+   "host": "postgres",
    "port": 5432,
-   "username": "me",
-   "password": "password",
-   "database": "api",
+   "username": "postgres",
+   "password": "postgres",
+   "database": "postgres",
    "synchronize": false,
-   "migrationsRun": true,
+   "migrationsRun": false,
    "logging": false,
-   "entities": ["build/src/entity/*.js"],
+   "entities": ["build/src/entity/**/*.js"],
    "migrations": [
       "build/src/migration/**/*.js"
    ],
    "subscribers": [
-      "src/subscriber/**/*.ts"
+      "build/src/subscriber/**/*.js"
    ],
    "cli": {
       "entitiesDir": "src/entity",

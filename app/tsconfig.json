@@ -1,4 +1,8 @@
 {
+   "exclude": [
+      "node_modules",
+      "build"
+   ],
    "compilerOptions": {
       "lib": [
          "es5",
@@ -8,9 +12,14 @@
       "module": "commonjs",
       "moduleResolution": "node",
       "outDir": "./build",
+      "baseUrl" : "./src",
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
       "sourceMap": true,
-      "allowJs": true
+      "skipLibCheck": true,
+      "allowJs": false,
    },
+   "files": [
+      "src/app.ts"
+  ]
 }
