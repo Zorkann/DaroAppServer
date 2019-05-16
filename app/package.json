@@ -5,8 +5,9 @@
    "main": "build/app.js",
    "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "ts-node src/app.ts",
-      "start:watch": "nodemon",
+      "start": "nodemon build/app.js",
+      "start:watch": "node build/app.js",
+      "tsc:watch": "tsc --watch",
       "db": "brew services start postgresql",
       "create": "typeorm migration:generate -n Test",
       "createX": "typeorm migration:create -n Test",
@@ -51,7 +52,7 @@
       "watch": [
          "src"
       ],
-      "exec": "npm run start",
+      "exec": "npm run start:watch",
       "ext": "ts"
    }
 }

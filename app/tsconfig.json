@@ -18,8 +18,5 @@
       "sourceMap": true,
       "skipLibCheck": true,
       "allowJs": false,
-   },
-   "files": [
-      "src/app.ts"
-  ]
+   }
 }

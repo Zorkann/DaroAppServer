@@ -14,4 +14,4 @@ RUN npm install
 
 COPY app/src ./src
 
-CMD npm run start:watch
+CMD npm run start
