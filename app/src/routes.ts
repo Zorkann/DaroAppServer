@@ -1,8 +1,9 @@
 import  User  from "./entity/User";
 import { getManager } from "typeorm";
 
-module.exports = function (app, connection) {
-  // todoList Routes
+
+module.exports = async function (app) {
+  // // todoList Routes
   const userRepo = getManager().getRepository(User);
   app.route('/users').get((request, response) => {
     userRepo.find().then(
@@ -12,6 +13,5 @@ module.exports = function (app, connection) {
         data
       })
     )
-
   })
 };

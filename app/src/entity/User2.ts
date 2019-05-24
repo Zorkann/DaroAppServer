@@ -1,23 +1,23 @@
 import { Entity, Column, PrimaryGeneratedColumn, BaseEntity } from "typeorm";
 
 @Entity()
-export default class User extends BaseEntity {
+export default class UserT extends BaseEntity {
 
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column({nullable: true})
-  title: string;
+  titleT: string;
 
   @Column({nullable: true})
-  text: string;
+  textT: string;
 
   @Column({nullable: true})
-  textY: string;
+  textYT: string;
 
   @Column({nullable: true})
-  textX: string;
+  textXT: string;
 
   @Column({nullable: true})
-  textXY: string;
+  textXYT: string;
 }
