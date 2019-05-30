@@ -15,28 +15,28 @@ module.exports = async function (app) {
     )
   });
 
-  app.route('/addUser').post(async (request, response) => {
-    const { name, surname, hallNumber, tableNumber, cost, couples } = request.body.newUser
-    const newUser = {
-      title: <string>name,
-      text: <string>surname,
-      textY: <string>hallNumber,
-      textX: <string>tableNumber,
-      textXY: <string>cost,
-      // textXY: <string>'',
-    }
-    try {
-      await getConnection()
-        .createQueryBuilder()
-        .insert()
-        .into(User)
-        .values(newUser)
-        .execute();
-      response.status(201).send('sucess')
-    } catch (err) {
-      console.log(err)
-      response.status(401).send('error')
-    }
-  })
+  // app.route('/addUser').post(async (request, response) => {
+  //   const { name, surname, hallNumber, tableNumber, cost, couples } = request.body.newUser
+  //   const newUser = {
+  //     title: <string>name,
+  //     text: <string>surname,
+  //     textY: <string>hallNumber,
+  //     textX: <string>tableNumber,
+  //     textXY: <string>cost,
+  //     // textXY: <string>'',
+  //   }
+  //   try {
+  //     await getConnection()
+  //       .createQueryBuilder()
+  //       .insert()
+  //       .into(User)
+  //       .values(newUser)
+  //       .execute();
+  //     response.status(201).send('sucess')
+  //   } catch (err) {
+  //     console.log(err)
+  //     response.status(401).send('error')
+  //   }
+  // })
 
 };

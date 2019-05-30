@@ -7,17 +7,8 @@ export default class User extends BaseEntity {
   id: number;
 
   @Column({nullable: true})
-  title: string;
+  name: string;
 
   @Column({nullable: true})
-  text: string;
-
-  @Column({nullable: true})
-  textY: string;
-
-  @Column({nullable: true})
-  textX: string;
-
-  @Column({nullable: true})
-  textXY: string;
-}
+  surname: string;
+ }
