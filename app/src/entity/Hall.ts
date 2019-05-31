@@ -1,17 +1,12 @@
 import { Entity, Column, PrimaryGeneratedColumn, BaseEntity } from "typeorm";
 
 @Entity()
-export default class Table extends BaseEntity {
+export default class Hall extends BaseEntity {
 
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  hallNumber: number;
+  name: string;
 
-  @Column()
-  tableNumber: number;
-
-  @Column()
-  cost: number;
 }

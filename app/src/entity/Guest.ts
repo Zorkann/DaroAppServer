@@ -1,14 +1,15 @@
 import { Entity, Column, PrimaryGeneratedColumn, BaseEntity } from "typeorm";
 
 @Entity()
-export default class User extends BaseEntity {
+export default class Guest extends BaseEntity {
 
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({nullable: true})
+  @Column({ nullable: true })
   name: string;
 
-  @Column({nullable: true})
+  @Column({ nullable: true })
   surname: string;
- }
+
+}

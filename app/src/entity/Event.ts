@@ -1,17 +1,12 @@
 import { Entity, Column, PrimaryGeneratedColumn, BaseEntity } from "typeorm";
 
 @Entity()
-export default class UserTables extends BaseEntity {
+export default class Event extends BaseEntity {
 
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  userId: number;
+  date: number;
 
-  @Column()
-  tableId: number;
-
-  @Column()
-  occupiedPlaces: number;
 }
