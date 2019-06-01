@@ -6,20 +6,20 @@ services:
             - DEFAULT_USER=admin
             - DEFAULT_PASSWORD=admin
         ports:
-            - 8080:5050
+            - 5050:5050
     postgres:
         image: 'postgres'
         environment:
             - POSTGRES_PASSWORD=postgres
             - POSTGRES_USER=postgres
         ports:
-            - 8081:5432
+            - 5432:5432
     server:
         image: server
         build: .
         depends_on:
             - postgres
         ports:
-            - 8082:5000
+            - 5000:5000
         volumes:
             - ./app/src:/app/src
