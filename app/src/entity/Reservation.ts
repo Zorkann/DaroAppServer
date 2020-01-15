@@ -6,7 +6,7 @@ import {
   OneToOne,
   JoinColumn
 } from "typeorm";
-import Guest from "./Guest";
+import Guest from "./User";
 import Event from "./Event";
 import Table from "./Table";
 

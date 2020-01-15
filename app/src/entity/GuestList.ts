@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, BaseEntity, OneToOne, JoinColumn } from "typeorm";
-import Guest from './Guest';
+import Guest from './User';
 import Event from './Event';
 
 @Entity()
