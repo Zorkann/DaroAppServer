@@ -14,8 +14,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 createConnection()
-  .then(() => {
-    createDefaultUser()
+  .then(async connection => {
+    await connection.runMigrations();
+    createDefaultUser();
     app.use("/auth", routes.auth);
 
     app.listen(PORT, () => {
