@@ -1,11 +1,17 @@
-import { Entity, Column, PrimaryGeneratedColumn, BaseEntity, OneToOne, JoinColumn } from "typeorm";
-import Guest from './Guest';
-import Event from './Event';
-import Table from './Table';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  BaseEntity,
+  OneToOne,
+  JoinColumn
+} from "typeorm";
+import Guest from "./Guest";
+import Event from "./Event";
+import Table from "./Table";
 
 @Entity()
 export default class Reservation extends BaseEntity {
-
   @PrimaryGeneratedColumn()
   id: number;
 
