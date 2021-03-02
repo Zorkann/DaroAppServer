@@ -5,8 +5,8 @@
   "main": "build/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc && nodemon build/app.js",
-    "start:watch": "tsc && node build/app.js",
+    "start": "nodemon -L --config nodemon.json",
+    "start:watch": "ts-node build/app.js",
     "tsc:watch": "tsc --watch",
     "generate": "npx ts-node ./node_modules/.bin/typeorm migration:generate",
     "migrate": "npx ts-node ./node_modules/.bin/typeorm migration:run"
@@ -22,35 +22,22 @@
   },
   "homepage": "https://github.com/Zorkann/DaroAppServer#readme",
   "dependencies": {
-    "@types/body-parser": "^1.17.0",
-    "@types/express": "^4.16.1",
-    "@types/node": "^11.13.8",
-    "@types/pg": "^7.4.14",
+    "@types/body-parser": "^1.19.0",
+    "@types/express": "^4.17.11",
+    "@types/node": "^14.14.31",
+    "@types/pg": "^7.14.10",
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
-    "express": "^4.16.4",
-    "pg": "^7.10.0",
-    "reflect-metadata": "^0.1.10",
-    "typeorm": "^0.2.22"
+    "express": "^4.17.1",
+    "pg": "^8.5.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.31"
   },
   "devDependencies": {
-    "nodemon": "^1.18.10",
-    "ts-node": "7.0.1",
-    "typescript": "3.4.5"
-  },
-  "nodemonConfig": {
-    "ignore": [
-      "**/*.test.ts",
-      "**/*.spec.ts",
-      ".git",
-      "node_modules"
-    ],
-    "watch": [
-      "src"
-    ],
-    "exec": "npm run start:watch",
-    "ext": "ts"
+    "nodemon": "^2.0.7",
+    "ts-node": "9.1.1",
+    "typescript": "4.2.2"
   }
 }

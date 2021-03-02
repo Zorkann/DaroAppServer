@@ -11,14 +11,14 @@ router.post("/login", async (request, response) => {
 
   const user = await UserRepository.findOne({
     login,
-    password
+    password,
   });
 
   if (user) {
     return response.sendStatus(200);
   } else {
     return response.status(400).send({
-      error: "Wrong credentials"
+      error: "Wrong credentials",
     });
   }
 });
@@ -32,7 +32,7 @@ router.get("/users", async (request, response) => {
   const users = await UserRepository.find();
   if (users) {
     return response.status(200).send({
-      users: users.map(user => user.login)
+      users: users.map((user) => user.login),
     });
   }
 });
