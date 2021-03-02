@@ -5,8 +5,8 @@
   "main": "build/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc && nodemon -L --config nodemon.json build/app.js",
-    "start:watch": "tsc && node build/app.js",
+    "start": "nodemon -L --config nodemon.json",
+    "start:watch": "ts-node build/app.js",
     "tsc:watch": "tsc --watch",
     "generate": "npx ts-node ./node_modules/.bin/typeorm migration:generate",
     "migrate": "npx ts-node ./node_modules/.bin/typeorm migration:run"
