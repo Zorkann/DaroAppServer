@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 createConnection()
-  .then(async connection => {
+  .then(async (connection) => {
     await connection.runMigrations();
     createDefaultUser();
     app.use("/auth", routes.auth);
@@ -23,4 +23,4 @@ createConnection()
       console.log(`server on port ${PORT}`);
     });
   })
-  .catch(error => console.log(error));
+  .catch((error) => console.log(error));

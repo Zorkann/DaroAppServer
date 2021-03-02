@@ -1,0 +1,10 @@
+{
+  "restartable": "rs",
+  "ignore": ["**/*.test.ts", "**/*.spec.ts", ".git", "node_modules"],
+  "watch": ["src"],
+  "exec": "npm run start:watch",
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "ts"
+}

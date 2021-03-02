@@ -22,4 +22,4 @@ services:
     ports:
       - 8082:5000
     volumes:
-      - ./app/src:/app/src
+      - ./src:/src

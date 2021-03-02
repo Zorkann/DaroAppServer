@@ -4,14 +4,16 @@ RUN mkdir app
 
 WORKDIR app
 
-COPY app/package.json .
+COPY package*.json ./
 
-COPY app/ormconfig.json .
+COPY ormconfig.json .
 
-COPY app/tsconfig.json .
+COPY tsconfig.json .
+
+COPY nodemon.json .
 
 RUN npm install
 
-COPY app/src ./src
+COPY . .
 
 CMD npm run start
